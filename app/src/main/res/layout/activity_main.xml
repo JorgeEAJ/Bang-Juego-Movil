@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bang_portada2"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.779">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLocal"
+            android:layout_width="170dp"
+            android:layout_height="59dp"
+            android:background="@drawable/btn_bala"
+            android:fontFamily="@font/font_west"
+            android:text="Modo Local"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCreateGame"
+            android:layout_width="170dp"
+            android:layout_height="59dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/btn_bala"
+            android:fontFamily="@font/font_west"
+            android:text="Crear Partida"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnJoinGame"
+            android:layout_width="170dp"
+            android:layout_height="59dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/btn_bala"
+            android:fontFamily="@font/font_west"
+            android:text="Unirse a Partida"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
