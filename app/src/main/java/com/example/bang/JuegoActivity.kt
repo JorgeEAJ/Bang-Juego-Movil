@@ -1,8 +1,6 @@
 package com.example.bang
 
-import android.content.Context
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
