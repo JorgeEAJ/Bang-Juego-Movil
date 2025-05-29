@@ -1,11 +1,5 @@
 package com.example.bang.modelos
 
-import androidx.activity.viewModels
-import androidx.appcompat.app.AlertDialog
-import com.example.bang.JuegoActivity
-import com.example.bang.viewModel.JuegoViewModel
-import kotlin.getValue
-
 object Flechas {
     const val MAX_FLECHAS = 9
     var disponibles = MAX_FLECHAS
@@ -22,10 +16,10 @@ object Flechas {
 
     fun atacarIndios(jugadores: List<Jugador>) {
         jugadores.forEach { jugador ->
-            val daño = jugador.flechas
-            if (daño > 0) {
-                val dañoFinal = if (jugador.personaje.nombre == "Jourdonnais") minOf(daño, 1) else daño
-                jugador.salud -= dañoFinal
+            val damage  = jugador.flechas
+            if (damage  > 0) {
+                val damageFinal = if (jugador.personaje.nombre == "Jourdonnais") minOf(damage, 1) else damage
+                jugador.salud -= damageFinal
             }
             jugador.flechas = 0
         }

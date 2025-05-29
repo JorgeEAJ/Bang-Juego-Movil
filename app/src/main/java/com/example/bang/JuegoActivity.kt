@@ -15,6 +15,7 @@ import com.example.bang.viewModel.JuegoViewModel
 import kotlin.math.min
 
 
+@Suppress("DEPRECATION")
 class JuegoActivity : AppCompatActivity() {
     private val viewModel: JuegoViewModel by viewModels()
 
@@ -40,9 +41,13 @@ class JuegoActivity : AppCompatActivity() {
 
         // Si es la primera vez, guarda la lista
         if (viewModel.getJugadores().isEmpty()) {
-            val jugadoresIntent = intent.getSerializableExtra("jugadores") as? ArrayList<Jugador>
-            if (jugadoresIntent != null) {
-                viewModel.setJugadores(jugadoresIntent)
+            @Suppress("UNCHECKED_CAST")
+            val jugadoresIntent = intent.getSerializableExtra("jugadores") as? ArrayList<*>
+            val jugadores = jugadoresIntent?.filterIsInstance<Jugador>() as? ArrayList<Jugador>
+            if (!jugadores.isNullOrEmpty()) {
+                viewModel.setJugadores(jugadores)
+            } else {
+                println("No se recibieron jugadores en el intent")
             }
         }
 
@@ -94,8 +99,8 @@ class JuegoActivity : AppCompatActivity() {
 
     private fun actualizarUI() {
         val jugador = viewModel.getJugadorActual()
-        tvJugadorTurno.text = "Turno de: ${jugador?.nombre}"
-        tvFlechasInfo.text = "Flechas disponibles: ${Flechas.disponibles}"
+        tvJugadorTurno.text = getString(R.string.tvJugadorTurno, jugador?.nombre)
+        tvFlechasInfo.text = getString(R.string.tvFlechasInfo, Flechas.disponibles)
 
         tvListaJugadores.text = viewModel.getJugadores().joinToString("\n") {
             if (!it.muerto){

@@ -1,14 +1,11 @@
 package com.example.bang.viewModel
 
 import android.content.Context
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModel
-import com.example.bang.JuegoActivity
 import com.example.bang.modelos.Dado
 import com.example.bang.modelos.Flechas
 import com.example.bang.modelos.Jugador
-import kotlin.compareTo
 import kotlin.math.min
 
 class JuegoViewModel : ViewModel() {
@@ -186,7 +183,7 @@ class JuegoViewModel : ViewModel() {
             .show()
     }
 
-    fun verificarMuerto(contexto: Context,) {
+    fun verificarMuerto(contexto: Context) {
         val jugadores = getJugadores()
         val muertos = jugadores.filter { it.salud <= 0 && !it.muerto }
 

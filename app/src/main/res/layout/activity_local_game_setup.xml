@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo_red"
-    tools:context=".LocalGameSetupActivity">
+    tools:context=".LocalGameSetupActivity"
+    tools:ignore="HardcodedText">
 
     <ScrollView
         android:layout_width="0dp"
@@ -58,11 +59,14 @@
                 android:layout_width="170dp"
                 android:layout_height="59dp"
                 android:layout_marginTop="16dp"
-                android:fontFamily="@font/font_west"
                 android:background="@drawable/btn_bala"
+                android:contentDescription="Iniciar partida local"
+                android:fontFamily="@font/font_west"
                 android:text="@string/play_name"
                 android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                tools:ignore="TextSizeCheck" />
+
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnreturn"
                 android:layout_width="170dp"

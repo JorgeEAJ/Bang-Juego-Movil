@@ -3,4 +3,10 @@
     <string name="num_play_name">Número de jugadores:</string>
     <string name="play_name">Iniciar Partida</string>
     <string name="Regresar">Regresar</string>
+    <string name="jugador_nombre">Jugador: %1$s</string>
+    <string name="jugador_rol">Rol: %1$s</string>
+    <string name="jugador_personaje">Personaje: %1$s</string>
+    <string name="jugador_salud">Balas: %1$d</string>
+    <string name="tvJugadorTurno">Turno de: %1$s</string>
+    <string name="tvFlechasInfo">Flechas disponibles: %1$d</string>
 </resources>

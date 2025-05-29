@@ -16,6 +16,7 @@ class LocalGameSetupActivity : AppCompatActivity() {
     private lateinit var spinnerPlayers: Spinner
     private lateinit var playerInputsContainer: LinearLayout
     private lateinit var btnStart: Button
+    private lateinit var btnreturn: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +25,7 @@ class LocalGameSetupActivity : AppCompatActivity() {
         spinnerPlayers = findViewById(R.id.spinnerPlayers)
         playerInputsContainer = findViewById(R.id.playerInputsContainer)
         btnStart = findViewById(R.id.btnStartLocalGame)
+        btnreturn = findViewById(R.id.btnreturn)
 
         // Crear opciones del spinner (3 a 8 jugadores)
         val playerCounts = (3..8).toList()
@@ -35,6 +37,7 @@ class LocalGameSetupActivity : AppCompatActivity() {
             if (event.action == MotionEvent.ACTION_DOWN) {
                 val animation = AnimationUtils.loadAnimation(this, R.anim.slide_down)
                 spinnerPlayers.startAnimation(animation)
+                v.performClick()
             }
             false
         }
@@ -62,6 +65,11 @@ class LocalGameSetupActivity : AppCompatActivity() {
             val intent = Intent(this, VerJugador::class.java)
             intent.putExtra("jugadores", ArrayList(jugadores))
             startActivity(intent)
+        }
+        btnreturn.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            TransitionHelper.applyTransition(this, R.anim.slide_down, R.anim.fade_out)
         }
 
     }

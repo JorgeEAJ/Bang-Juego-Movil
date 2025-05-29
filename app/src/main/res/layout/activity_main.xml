@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bang_portada2"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText">
 
 
     <LinearLayout
@@ -30,7 +31,8 @@
             android:fontFamily="@font/font_west"
             android:text="Modo Local"
             android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+             />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnCreateGame"
@@ -41,7 +43,8 @@
             android:fontFamily="@font/font_west"
             android:text="Crear Partida"
             android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            tools:ignore="TextSizeCheck" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnJoinGame"
@@ -52,7 +55,8 @@
             android:fontFamily="@font/font_west"
             android:text="Unirse a Partida"
             android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            tools:ignore="TextSizeCheck" />
 
     </LinearLayout>
 

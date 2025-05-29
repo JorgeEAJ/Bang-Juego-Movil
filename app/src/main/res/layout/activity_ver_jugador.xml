@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VerJugador">
+    tools:context=".VerJugador"
+    tools:ignore="HardcodedText">
 
     <LinearLayout
         android:id="@+id/layoutInfo"
@@ -27,7 +28,8 @@
             android:layout_marginBottom="16dp"
             android:text="Nombre del Jugador"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/tvRol"
@@ -35,14 +37,17 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:text="Rol: Sheriff"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            tools:ignore="VisualLintBounds" />
 
         <ImageView
             android:id="@+id/tvRolCarta"
             android:layout_width="220dp"
             android:layout_height="300dp"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/sheriff" />
+            app:srcCompat="@drawable/sheriff"
+            android:contentDescription="Imagen de carta"
+            tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/tvPersonaje"
@@ -50,7 +55,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="Personaje: Bart Cassidy"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/tvSalud"
@@ -58,7 +64,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="Balas: 10"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/tvHabilidad"
@@ -66,13 +73,15 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="32dp"
             android:text="Habilidad especial"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            tools:ignore="VisualLintBounds" />
 
         <Button
             android:id="@+id/btnSiguiente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Siguiente jugador" />
+            android:text="Siguiente jugador"
+            tools:ignore="VisualLintBounds" />
 
     </LinearLayout>
 
